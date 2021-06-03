@@ -1,0 +1,39 @@
+<h2>Add Photos: </h2>
+
+<%= form_with model: [ @myco_file, @myco_file.photos.build ] do | form |%>
+    <div>
+      <%= form.label :image %><br>
+      <%= form.file_field :image %>
+      <% @myco_file.errors.full_messages_for(:location).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :filename %><br>
+      <%= form.text_field :filename %>
+      <% @myco_file.errors.full_messages_for(:location).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :alt %><br>
+      <%= form.text_area :alt %>
+      <% @myco_file.errors.full_messages_for(:location).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+
+    <div>
+      <%= form.label :category %><br>
+      <%= form.text_field :category %>
+      <% @myco_file.errors.full_messages_for(:location).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+    <%= form.submit %>
+  </div>
+    <% end %>

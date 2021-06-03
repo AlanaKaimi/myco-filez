@@ -44,7 +44,7 @@ class MycoFilesController < ApplicationController
 
   private
     def myco_file_params
-      params.require(:myco_file).permit(:name, :shape, :color, :gills, :pores, :edibility, :season, :location)
+      params.require(:myco_file).permit(:name, :shape, :color, :gills, :pores, :edibility, :season, :location, photos: [])
     end
 
 end

@@ -8,6 +8,12 @@
 <p>Season: <%= @myco_file.season %></p>
 <p>Location: <%= @myco_file.location %></p>
 
+
+
+<h2>Photos:</h2>
+
+<%= render @myco_file.photos %>
+
 <ul>
   <li><%= link_to "Edit", edit_myco_file_path(@myco_file) %></li>
   <li><%= link_to "Delete", myco_file_path(@myco_file),
