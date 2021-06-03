@@ -8,6 +8,25 @@
 <p>Season: <%= @myco_file.season %></p>
 <p>Location: <%= @myco_file.location %></p>
 
+<h2>Photos:</h2>
+<% @myco_file.photos.each do |photo| %>
+  <p>
+    <strong>Filename:</strong>
+    <%= photo.filename %>
+  </p>
+
+  <p>
+    <strong>Alt:</strong>
+    <%= photo.alt %>
+  </p>
+
+  <div style="width:300px; height:300px">
+    <%= image_tag(photo.image, style:'width:100%; height: auto') %>
+  </div>
+<% end %>
+
+
+
 <ul>
   <li><%= link_to "Edit", edit_myco_file_path(@myco_file) %></li>
   <li><%= link_to "Delete", myco_file_path(@myco_file),
