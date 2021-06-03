@@ -1,0 +1,2 @@
+class MycoFile < ApplicationRecord
+end
