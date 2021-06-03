@@ -21,6 +21,20 @@ class MycoFilesController < ApplicationController
     end
   end
 
+  def edit
+    @myco_file = MycoFile.find(params[:id])
+  end
+
+  def update
+    @myco_file = MycoFile.find(params[:id])
+
+    if @myco_file.update(myco_file_params)
+      redirect_to @myco_file
+    else
+      render :edit
+    end
+  end
+
   private
     def myco_file_params
       params.require(:myco_file).permit(:name, :shape, :color, :gills, :pores, :edibility, :season, :location)
