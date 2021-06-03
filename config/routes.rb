@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root "myco_files#index"
   
-  get "/myco-filez", to: "myco_files#index"
-  get "/myco-filez/:id", to: "myco_files#show"
+  resources :myco_files, path: '/myco-filez'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
