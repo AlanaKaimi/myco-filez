@@ -7,3 +7,7 @@
 <p>Edibility: <%= @myco_file.edibility %></p>
 <p>Season: <%= @myco_file.season %></p>
 <p>Location: <%= @myco_file.location %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_myco_file_path(@myco_file) %></li>
+</ul>

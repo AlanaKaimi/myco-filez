@@ -1,0 +1,63 @@
+<%= form_with model: @myco_file do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @myco_file.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :shape %><br>
+    <%= form.text_area :shape %>
+    <% @myco_file.errors.full_messages_for(:shape).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :color %><br>
+    <%= form.text_area :color %>
+    <% @myco_file.errors.full_messages_for(:color).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :gills %><br>
+    <%= form.check_box :gills %>
+  </div>
+
+  <div>
+    <%= form.label :pores %><br>
+    <%= form.check_box :pores %>
+  </div>
+
+  <div>
+    <%= form.label :edibility %><br>
+    <%= form.text_area :edibility %>
+    <% @myco_file.errors.full_messages_for(:edibility).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :season %><br>
+    <%= form.text_area :season %>
+    <% @myco_file.errors.full_messages_for(:season).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :location %><br>
+    <%= form.text_area :location %>
+    <% @myco_file.errors.full_messages_for(:location).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
