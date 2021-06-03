@@ -1,2 +1,10 @@
 <h1>Myco-Filez</h1>
 <p>Find info about Mushrooms here!</p>
+
+<ul>
+  <% @myco_files.each do |myco_file| %>
+    <li>
+      <%= myco_file.name %>
+    </li>
+  <% end %>
+</ul>
