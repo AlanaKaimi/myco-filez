@@ -12,7 +12,7 @@ class MycoFilesController < ApplicationController
   end
 
   def create
-    @myco_file = MycoFile.new(name: "...", shape: "...", color: "...", gills: 0, pores: 0, edibility: "...", season: "...", location: "...")
+    @myco_file = MycoFile.new(myco_file_params)
 
     if @myco_file.save
       redirect_to @myco_file
@@ -20,5 +20,9 @@ class MycoFilesController < ApplicationController
       render :new
     end
   end
+
+  private
+    def myco_file_params
+      params.require(:myco_file).permit(:name, :shape, :color, :gills, :pores, :edibility, :season, :location)
 
 end
