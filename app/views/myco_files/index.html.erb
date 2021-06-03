@@ -4,7 +4,9 @@
 <ul>
   <% @myco_files.each do |myco_file| %>
     <li>
+    <a href="/myco-filez/<%= myco_file.id %>">
       <%= myco_file.name %>
+      </a>
     </li>
   <% end %>
 </ul>
