@@ -10,4 +10,7 @@
 
 <ul>
   <li><%= link_to "Edit", edit_myco_file_path(@myco_file) %></li>
+  <li><%= link_to "Delete", myco_file_path(@myco_file),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
 </ul>

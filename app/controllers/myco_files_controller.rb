@@ -35,6 +35,13 @@ class MycoFilesController < ApplicationController
     end
   end
 
+  def destroy
+    @myco_file = MycoFile.find(params[:id])
+    @myco_file.destroy
+
+    redirect_to root_path
+  end
+
   private
     def myco_file_params
       params.require(:myco_file).permit(:name, :shape, :color, :gills, :pores, :edibility, :season, :location)
