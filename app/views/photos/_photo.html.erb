@@ -1,14 +1,17 @@
-<div style="width:300px; height:auto">
-  <%= image_tag(photo.image, style:'width:100%; max-height: 100%', alt: photo.alt) %>
+<div class="col">
+  <div style="width:100%; height:auto" class="img-thumbnail">
+    <%= image_tag(photo.image, style:'width:100%; max-height: 100%', alt: photo.alt) %>
+  </div>
+
+  <p>
+    <strong>Title:</strong>
+    <%= photo.filename %>
+  </p>
+
+  <p>
+    <strong>Caption:</strong>
+    <%= photo.alt %>
+  </p>
+
 </div>
-
-<p>
-  <strong>Title:</strong>
-  <%= photo.filename %>
-</p>
-
-<p>
-  <strong>Caption:</strong>
-  <%= photo.alt %>
-</p>
 
