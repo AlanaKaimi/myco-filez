@@ -1,12 +1,10 @@
 <h1>Myco-Filez</h1>
 <p>Find info about Mushrooms here!</p>
 
-<ul>
-  <% @myco_files.each do |myco_file| %>
-    <li>
-      <%= link_to myco_file.name, myco_file %>
-    </li>
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+<% @myco_files.each do |myco_file| %>
+          
+      <%= render partial: "myco_files/card", :locals => { :myco_file => myco_file } %>
+    
   <% end %>
-</ul>
-
-<%= link_to "New Myco-File", new_myco_file_path %>
+</div>
