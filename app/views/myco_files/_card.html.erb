@@ -1,0 +1,18 @@
+<div class="col">
+  <div class="card h-100">
+    <% if myco_file.photos.length > 0 %>
+      <div class="card-img-top" alt="...">
+        <%= image_tag(myco_file.photos[0].image, class: 'img-thumbnail ', style:'width:100%; height: 300px', alt: myco_file.photos[0].alt) %>
+      </div>
+    <% end %>
+    
+    <div class="card-body">
+      <h5 class="card-title"><%= myco_file.name %></h5>
+      <p class="card-text">Edibility: <%= myco_file.edibility %></p>
+      <small class="text-muted">Season: <%= myco_file.season %></small>
+    </div>
+    <div class="card-footer text-end">
+      <%= link_to "Read More...", myco_file %>
+    </div>
+  </div>
+</div>
