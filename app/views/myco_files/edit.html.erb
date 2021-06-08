@@ -1,5 +1,14 @@
-<h1> Edit Myco-File </h1>
+<div class="p-5 bg-white" id="content">
+  <h1>Edit Myco-File </h1>
 
-<%= render "form", myco_file: @myco_file %>
+  <div class="row">
+    <div class="col">
+      <%= render "form", myco_file: @myco_file %>
+    </div>
 
-<%= render "/photos/form", myco_file: @mycofile %>
+    <div class="col">
+      <%= render "/photos/form", myco_file: @mycofile %>
+    </div>
+  </div>
+
+</div>
